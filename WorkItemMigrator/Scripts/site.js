@@ -15,9 +15,9 @@ function determineView() {
     if ($('#detail').data('workitem-id') === 0) {
         $('#Id').val('');
         $('#search').show();
-        $('#detail').hide();
+        $('#results').hide();
     } else {
-        $('#detail').show();
+        $('#results').show();
         $('#search').hide();
     }
 }

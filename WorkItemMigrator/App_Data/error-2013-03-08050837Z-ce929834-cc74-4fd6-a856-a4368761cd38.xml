@@ -1,0 +1,201 @@
+﻿<error errorId="ce929834-cc74-4fd6-a856-a4368761cd38" application="/" host="LENOVO-PC" type="System.ArgumentOutOfRangeException" message="The item 11853 is not in the Study Global project&#xD;&#xA;Parameter name: itemId" source="WorkItemMigrator.Migration" detail="System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---&gt; System.ArgumentOutOfRangeException: The item 11853 is not in the Study Global project&#xD;&#xA;Parameter name: itemId&#xD;&#xA;   at WorkItemMigrator.Migration.TeamFoundation.StudyGlobalDevRepository.Fetch(String itemId) in d:\dev\WIM\WorkItemMigrator.Migration\TeamFoundation\StudyGlobalDevRepository.cs:line 141&#xD;&#xA;   at WorkItemMigrator.Presenters.SearchPresenter.Fetch(Object sender, FetchEventArgs fetchEventArgs) in d:\dev\WIM\WorkItemMigrator\Presenters\SearchPresenter.cs:line 38&#xD;&#xA;   at WorkItemMigrator.Views.SearchView.OnFetch(FetchEventArgs e) in d:\dev\WIM\WorkItemMigrator\Views\SearchView.ascx.cs:line 27&#xD;&#xA;   at WorkItemMigrator.Views.SearchView.FetchHandler(Object sender, EventArgs e) in d:\dev\WIM\WorkItemMigrator\Views\SearchView.ascx.cs:line 33&#xD;&#xA;   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)&#xD;&#xA;   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)&#xD;&#xA;   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)&#xD;&#xA;   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)&#xD;&#xA;   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.HandleError(Exception e)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest()&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(HttpContext context)&#xD;&#xA;   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\19eeb0d9\579a86a1\App_Web_dzgkpzht.0.cs:line 0&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="LENOVO-PC\stephen.godbold" time="2013-03-08T05:08:37.8083170Z" statusCode="500" webHostHtmlMessage="&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;The item 11853 is not in the Study Global project&lt;br&gt;Parameter name: itemId&lt;/title&gt;&#xD;&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Consolas&quot;,&quot;Lucida Console&quot;,Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;         @media screen and (max-width: 639px) {&#xD;&#xA;          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }&#xD;&#xA;         }&#xD;&#xA;         @media screen and (max-width: 479px) {&#xD;&#xA;          pre { width: 280px; }&#xD;&#xA;         }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Server Error in '/' Application.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;The item 11853 is not in the Study Global project&lt;br&gt;Parameter name: itemId&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Description: &lt;/b&gt;An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Exception Details: &lt;/b&gt;System.ArgumentOutOfRangeException: The item 11853 is not in the Study Global project&lt;br&gt;Parameter name: itemId&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Source Error:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;Line 139:            if (!workItem.Project.Name.Equals(ProjectName, StringComparison.InvariantCultureIgnoreCase))&#xD;&#xA;Line 140:            {&#xD;&#xA;&lt;font color=red&gt;Line 141:                throw new ArgumentOutOfRangeException(&amp;quot;itemId&amp;quot;,&#xD;&#xA;&lt;/font&gt;Line 142:                                                      string.Format(&amp;quot;The item {0} is not in the Study Global project&amp;quot;,&#xD;&#xA;Line 143:                                                                    itemId));&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Source File: &lt;/b&gt; d:\dev\WIM\WorkItemMigrator.Migration\TeamFoundation\StudyGlobalDevRepository.cs&lt;b&gt; &amp;nbsp;&amp;nbsp; Line: &lt;/b&gt; 141&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Stack Trace:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;[ArgumentOutOfRangeException: The item 11853 is not in the Study Global project&#xD;&#xA;Parameter name: itemId]&#xD;&#xA;   WorkItemMigrator.Migration.TeamFoundation.StudyGlobalDevRepository.Fetch(String itemId) in d:\dev\WIM\WorkItemMigrator.Migration\TeamFoundation\StudyGlobalDevRepository.cs:141&#xD;&#xA;   WorkItemMigrator.Presenters.SearchPresenter.Fetch(Object sender, FetchEventArgs fetchEventArgs) in d:\dev\WIM\WorkItemMigrator\Presenters\SearchPresenter.cs:38&#xD;&#xA;   WorkItemMigrator.Views.SearchView.OnFetch(FetchEventArgs e) in d:\dev\WIM\WorkItemMigrator\Views\SearchView.ascx.cs:27&#xD;&#xA;   WorkItemMigrator.Views.SearchView.FetchHandler(Object sender, EventArgs e) in d:\dev\WIM\WorkItemMigrator\Views\SearchView.ascx.cs:33&#xD;&#xA;   System.Web.UI.WebControls.Button.OnClick(EventArgs e) +9553178&#xD;&#xA;   System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument) +103&#xD;&#xA;   System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument) +10&#xD;&#xA;   System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) +13&#xD;&#xA;   System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData) +35&#xD;&#xA;   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +1724&#xD;&#xA;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:971&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_CHARSET:ISO-8859-1,utf-8;q=0.7,*;q=0.3&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip,deflate,sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8&#xD;&#xA;HTTP_HOST:localhost:24271&#xD;&#xA;HTTP_REFERER:http://localhost:24271/&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.152 Safari/537.22&#xD;&#xA;HTTP_ORIGIN:http://localhost:24271&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 971&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3&#xD;&#xA;Accept-Encoding: gzip,deflate,sdch&#xD;&#xA;Accept-Language: en-US,en;q=0.8&#xD;&#xA;Host: localhost:24271&#xD;&#xA;Referer: http://localhost:24271/&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.152 Safari/537.22&#xD;&#xA;Origin: http://localhost:24271&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\dev\WIM\WorkItemMigrator\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="NTLM" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="LENOVO-PC\stephen.godbold" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="LENOVO-PC\stephen.godbold" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="LENOVO-PC\stephen.godbold" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="971" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/default.aspx" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\dev\WIM\WorkItemMigrator\default.aspx" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/default.aspx" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="24271" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/default.aspx" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="971" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_CHARSET">
+      <value string="ISO-8859-1,utf-8;q=0.7,*;q=0.3" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip,deflate,sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:24271" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:24271/" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.152 Safari/537.22" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:24271" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__EVENTTARGET">
+      <value string="" />
+    </item>
+    <item name="__EVENTARGUMENT">
+      <value string="" />
+    </item>
+    <item name="__VIEWSTATE">
+      <value string="/wEPDwUJMTc4MTcwNTAzD2QWAgIDD2QWBGYPZBYCAgUPEA8WAh4LXyFEYXRhQm91bmRnZBAVAxRTdHVkeSBHcm91cCBIZWxwZGVzawxTdHVkeSBHbG9iYWwQU3R1ZHkgR2xvYmFsIERldhUDEkhlbHBkZXNrUmVwb3NpdG9yeRVTdHVkeUdsb2JhbFJlcG9zaXRvcnkYU3R1ZHlHbG9iYWxEZXZSZXBvc2l0b3J5FCsDA2dnZ2RkAgEPZBYGZg8WAh4FVmFsdWUFATBkAgEPFgIfAWRkAgIPEA8WAh8AZ2QQFQAVABQrAwBkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUPY3RsMDYkQ2xvc2VJdGVt3TEZaIoq8yx0JpmcEK8TU9He3MHlHI5ApTYauMx4QxE=" />
+    </item>
+    <item name="__EVENTVALIDATION">
+      <value string="/wEdAAwMeSW/PmXp0qela6hz52nvVwtf9Nn9m56/9Jd1iOiuTtBoJWJpB38BQhT249304CTJ4GC8BsEk5QbXrAqPNDS2te0s0WlDvBa7w+wKRCYJIbxEM7GBJbrpe42J/K4VIcDhpnY8jIhIaRMuTi9APJjNDVqwrNCvntNz2Yt3zqXDcpRU3DgoKd6bgKB0Bh4x77z9ZGF5PSFmFzDAuuXaayMMrEmIZiqish8NWmJZgu9p1Jj8fESkMc9oATRxUEPUo7uM70rvlz8v2UHhuDmRKYlcH+8oOhjVt3GC3syNSZqlBg==" />
+    </item>
+    <item name="ctl05$Id">
+      <value string="11853" />
+    </item>
+    <item name="ctl05$ProviderName">
+      <value string="StudyGlobalDevRepository" />
+    </item>
+    <item name="ctl05$startSearch">
+      <value string="Search" />
+    </item>
+    <item name="ctl06$WorkItemId">
+      <value string="0" />
+    </item>
+    <item name="ctl06$SearchProvider">
+      <value string="" />
+    </item>
+    <item name="ctl06$Message">
+      <value string="" />
+    </item>
+  </form>
+</error>

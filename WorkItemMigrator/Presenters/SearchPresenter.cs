@@ -1,7 +1,9 @@
-﻿using WebFormsMvp;
+﻿using System;
+using Elmah;
+using WebFormsMvp;
 using WorkItemMigrator.Events;
 using WorkItemMigrator.Messages;
-using WorkItemMigrator.Migration.Providers;
+using WorkItemMigrator.Migration;
 using WorkItemMigrator.Models;
 using WorkItemMigrator.Views;
 
@@ -10,20 +12,14 @@ namespace WorkItemMigrator.Presenters
 
     public class SearchPresenter : Presenter<ISearchView>
     {
-        private readonly ISearchProviderFactory _searchProvider;
-        private readonly IExtensionManager _extensionManager;
+        private readonly SearchHub searchHub;
 
         public SearchPresenter(
-            ISearchView view, 
-            ISearchProviderFactory searchProvider,
-            IExtensionManager extensionManager)
+            ISearchView view,
+            SearchHub searchHub)
             : base(view)
         {
-            _searchProvider = searchProvider;
-            _extensionManager = extensionManager;
-
-            View.Model.Providers = _extensionManager.SearchProviders;
-
+            this.searchHub = searchHub;
             view.Search += Search;
             view.Load += delegate
                              {
@@ -33,14 +29,23 @@ namespace WorkItemMigrator.Presenters
 
         private void Search(object sender, SearchEventArgs searchEventArgs)
         {
-            var search = _searchProvider.GetByName(searchEventArgs.ProviderName);
-            var result = search.Get(searchEventArgs.ItemId);
+            try
+            {
+                var results = searchHub.Search(searchEventArgs.Criteria);
 
-            Messages.Publish(new ResultMessage
-                                 {
-                                     Item = result,
-                                     Provider = searchEventArgs.ProviderName
-                                 });
+                Messages.Publish(new SearchResultMessage
+                {
+                    Items = results
+                });
+            }
+            catch (ArgumentOutOfRangeException argEx)
+            {
+                ErrorLog.GetDefault(System.Web.HttpContext.Current).Log(new Error(argEx));
+                Messages.Publish(new StatusMessage
+                {
+                    Text = argEx.Message
+                });
+            }
         }
     }
 }

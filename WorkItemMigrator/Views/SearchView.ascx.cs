@@ -22,8 +22,7 @@ namespace WorkItemMigrator.Views
         {
             OnSearch(new SearchEventArgs
                          {
-                             ItemId = Id.Text,
-                             ProviderName = Provider.SelectedValue
+                             Criteria = Criteria.Text
                          });
         }
     }

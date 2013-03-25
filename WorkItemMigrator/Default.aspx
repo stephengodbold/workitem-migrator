@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WorkItemMigrator.DefaultView" %>
 
 <%@ Register Src="~/Views/SearchView.ascx" TagPrefix="uc" TagName="Search" %>
-<%@ Register Src="~/Views/ResultView.ascx" TagPrefix="uc" TagName="Result" %>
+<%@ Register Src="~/Views/ItemView.ascx" TagPrefix="uc" TagName="Result" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %></p>
+                <p>&copy; <%: DateTime.Now.Year %> - Study Group</p>
             </div>
         </div>
     </footer>

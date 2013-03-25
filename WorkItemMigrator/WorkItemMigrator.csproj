@@ -14,7 +14,7 @@
     <RootNamespace>WorkItemMigrator</RootNamespace>
     <AssemblyName>WorkItemMigrator</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -90,7 +90,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="appOffline.html" />
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -148,7 +147,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Scripts\site.js" />
-    <Content Include="Views\ResultView.ascx" />
+    <Content Include="Views\ItemView.ascx" />
+    <Content Include="Views\ResultsView.ascx" />
     <Content Include="Views\SearchView.ascx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -179,23 +179,38 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\FetchEventArgs.cs" />
+    <Compile Include="Events\SearchResultEventArgs.cs" />
+    <Compile Include="Services\ExtensionManager.cs" />
+    <Compile Include="Messages\FetchResultMessage.cs" />
     <Compile Include="Messages\StatusMessage.cs" />
     <Compile Include="Messages\CancelMessage.cs" />
     <Compile Include="Models\DefaultModel.cs" />
+    <Compile Include="Models\ResultsModel.cs" />
+    <Compile Include="Presenters\ResultsPresenter.cs" />
+    <Compile Include="Services\CollectionFacility.cs" />
     <Compile Include="Services\NameSelector.cs" />
-    <Compile Include="Presenters\ResultPresenter.cs" />
+    <Compile Include="Presenters\ItemPresenter.cs" />
     <Compile Include="Presenters\SearchPresenter.cs" />
     <Compile Include="Models\Action.cs" />
-    <Compile Include="Messages\ResultMessage.cs" />
-    <Compile Include="Views\IResultView.cs" />
-    <Compile Include="Models\ResultModel.cs" />
+    <Compile Include="Messages\SearchResultMessage.cs" />
+    <Compile Include="Views\IResultsView.cs" />
+    <Compile Include="Views\IItemView.cs" />
+    <Compile Include="Models\ItemModel.cs" />
     <Compile Include="Views\ISearchView.cs" />
-    <Compile Include="Views\ResultView.ascx.cs">
-      <DependentUpon>ResultView.ascx</DependentUpon>
+    <Compile Include="Views\ItemView.ascx.cs">
+      <DependentUpon>ItemView.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\ResultView.ascx.designer.cs">
-      <DependentUpon>ResultView.ascx</DependentUpon>
+    <Compile Include="Views\ItemView.ascx.designer.cs">
+      <DependentUpon>ItemView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResultsView.ascx.cs">
+      <DependentUpon>ResultsView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ResultsView.ascx.designer.cs">
+      <DependentUpon>ResultsView.ascx</DependentUpon>
     </Compile>
     <Compile Include="Views\SearchView.ascx.cs">
       <DependentUpon>SearchView.ascx</DependentUpon>
@@ -211,7 +226,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Events\SearchResultEventArgs.cs" />
+    <Compile Include="Events\FetchResultEventArgs.cs" />
     <Compile Include="Events\SearchEventArgs.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -275,11 +290,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>24271</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/workitemmigrator</IISUrl>
+          <IISUrl>http://localhost:24271/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

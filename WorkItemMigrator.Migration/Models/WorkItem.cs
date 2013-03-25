@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Microsoft.TeamFoundation.WorkItemTracking.Client;
 
 namespace WorkItemMigrator.Migration.Models
 {
     public class WorkItem
     {
         public int Id { get; set; }
+        public string Provider { get; set; }
         public WorkItemType Type { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

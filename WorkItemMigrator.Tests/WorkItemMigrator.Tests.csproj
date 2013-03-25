@@ -60,7 +60,7 @@
     <Compile Include="GraphTests\WalkingPathTests.cs" />
     <Compile Include="GraphTests\GraphWalkerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchProviderFactoryTests\Factory_Returns_Type.cs" />
+    <Compile Include="SearchTests\SearchHubTests.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

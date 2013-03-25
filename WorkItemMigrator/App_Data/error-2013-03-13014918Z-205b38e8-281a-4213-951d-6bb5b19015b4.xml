@@ -1,0 +1,154 @@
+﻿<error errorId="205b38e8-281a-4213-951d-6bb5b19015b4" application="/" host="LENOVO-PC" type="Castle.MicroKernel.Handlers.HandlerException" message="Can't create component 'WorkItemMigrator.Migration.SearchHub' as it has dependencies to be satisfied. &#xD;&#xA;WorkItemMigrator.Migration.SearchHub is waiting for the following dependencies: &#xD;&#xA;&#xD;&#xA;Keys (components with specific keys)&#xD;&#xA;- repositories which was not registered. &#xD;&#xA;" source="Castle.Windsor" detail="System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---&gt; Castle.MicroKernel.Handlers.HandlerException: Can't create component 'WorkItemMigrator.Migration.SearchHub' as it has dependencies to be satisfied. &#xD;&#xA;WorkItemMigrator.Migration.SearchHub is waiting for the following dependencies: &#xD;&#xA;&#xD;&#xA;Keys (components with specific keys)&#xD;&#xA;- repositories which was not registered. &#xD;&#xA;&#xD;&#xA;   at Castle.MicroKernel.Handlers.DefaultHandler.AssertNotWaitingForDependency() in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\DefaultHandler.cs:line 128&#xD;&#xA;   at Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\DefaultHandler.cs:line 57&#xD;&#xA;   at Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context, Boolean instanceRequired) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:line 771&#xD;&#xA;   at Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:line 369&#xD;&#xA;   at Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveServiceDependency(CreationContext context, ComponentModel model, DependencyModel dependency) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Resolvers\DefaultDependencyResolver.cs:line 390&#xD;&#xA;   at Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Resolvers\DefaultDependencyResolver.cs:line 243&#xD;&#xA;   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArgumentsCore(ConstructorCandidate constructor, Object[] arguments, CreationContext context, Type[] signature) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:line 353&#xD;&#xA;   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context, Type[]&amp; signature) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:line 338&#xD;&#xA;   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:line 90&#xD;&#xA;   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:line 70&#xD;&#xA;   at Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\AbstractComponentActivator.cs:line 75&#xD;&#xA;   at Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Lifestyle\AbstractLifestyleManager.cs:line 42&#xD;&#xA;   at Castle.MicroKernel.Lifestyle.PerWebRequestLifestyleManager.Resolve(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Lifestyle\PerWebRequestLifestyleManager.cs:line 54&#xD;&#xA;   at Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\DefaultHandler.cs:line 61&#xD;&#xA;   at Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context, Boolean instanceRequired) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:line 771&#xD;&#xA;   at Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:line 369&#xD;&#xA;   at Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\DefaultKernel.cs:line 899&#xD;&#xA;   at Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\DefaultKernel_Resolve.cs:line 188&#xD;&#xA;   at WebFormsMvp.Castle.CastlePresenterFactory.Create(Type presenterType, Type viewType, IView viewInstance) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp.Castle\CastlePresenterFactory.cs:line 30&#xD;&#xA;   at WebFormsMvp.Binder.PresenterBinder.BuildPresenter(HttpContextBase httpContext, ITraceContext traceContext, IMessageBus messageBus, Action`1 presenterCreatedCallback, IPresenterFactory presenterFactory, PresenterBinding binding, IView viewInstance) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\Binder\PresenterBinder.cs:line 468&#xD;&#xA;   at WebFormsMvp.Binder.PresenterBinder.&lt;&gt;c__DisplayClass2e.&lt;BuildPresenters&gt;b__2d(IView viewInstance) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\Binder\PresenterBinder.cs:line 442&#xD;&#xA;   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()&#xD;&#xA;   at System.Linq.Enumerable.&lt;SelectManyIterator&gt;d__14`2.MoveNext()&#xD;&#xA;   at WebFormsMvp.CollectionExtensions.AddRange[T](ICollection`1 target, IEnumerable`1 items) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\CollectionExtensions.cs:line 17&#xD;&#xA;   at WebFormsMvp.Binder.PresenterBinder.PerformBinding() in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\Binder\PresenterBinder.cs:line 220&#xD;&#xA;   at WebFormsMvp.Web.PageViewHost.Page_InitComplete(Object sender, EventArgs e) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\Web\PageViewHost.cs:line 70&#xD;&#xA;   at System.EventHandler.Invoke(Object sender, EventArgs e)&#xD;&#xA;   at System.Web.UI.Page.OnInitComplete(EventArgs e)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.HandleError(Exception e)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest()&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(HttpContext context)&#xD;&#xA;   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\19eeb0d9\579a86a1\App_Web_q4hj4bqr.0.cs:line 0&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="LENOVO-PC\stephen.godbold" time="2013-03-13T01:49:18.6272904Z" statusCode="500" webHostHtmlMessage="&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;Can't create component 'WorkItemMigrator.Migration.SearchHub' as it has dependencies to be satisfied. &lt;br&gt;WorkItemMigrator.Migration.SearchHub is waiting for the following dependencies: &lt;br&gt;&lt;br&gt;Keys (components with specific keys)&lt;br&gt;- repositories which was not registered. &lt;br&gt;&lt;/title&gt;&#xD;&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Consolas&quot;,&quot;Lucida Console&quot;,Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;         @media screen and (max-width: 639px) {&#xD;&#xA;          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }&#xD;&#xA;         }&#xD;&#xA;         @media screen and (max-width: 479px) {&#xD;&#xA;          pre { width: 280px; }&#xD;&#xA;         }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Server Error in '/' Application.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;Can't create component 'WorkItemMigrator.Migration.SearchHub' as it has dependencies to be satisfied. &lt;br&gt;WorkItemMigrator.Migration.SearchHub is waiting for the following dependencies: &lt;br&gt;&lt;br&gt;Keys (components with specific keys)&lt;br&gt;- repositories which was not registered. &lt;br&gt;&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Description: &lt;/b&gt;An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Exception Details: &lt;/b&gt;Castle.MicroKernel.Handlers.HandlerException: Can't create component 'WorkItemMigrator.Migration.SearchHub' as it has dependencies to be satisfied. &lt;br&gt;WorkItemMigrator.Migration.SearchHub is waiting for the following dependencies: &lt;br&gt;&lt;br&gt;Keys (components with specific keys)&lt;br&gt;- repositories which was not registered. &lt;br&gt;&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Source Error:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&#xD;&#xA;&#xD;&#xA;An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Stack Trace:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;[HandlerException: Can&amp;#39;t create component &amp;#39;WorkItemMigrator.Migration.SearchHub&amp;#39; as it has dependencies to be satisfied. &#xD;&#xA;WorkItemMigrator.Migration.SearchHub is waiting for the following dependencies: &#xD;&#xA;&#xD;&#xA;Keys (components with specific keys)&#xD;&#xA;- repositories which was not registered. &#xD;&#xA;]&#xD;&#xA;   Castle.MicroKernel.Handlers.DefaultHandler.AssertNotWaitingForDependency() in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\DefaultHandler.cs:128&#xD;&#xA;   Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\DefaultHandler.cs:57&#xD;&#xA;   Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context, Boolean instanceRequired) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:771&#xD;&#xA;   Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:369&#xD;&#xA;   Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveServiceDependency(CreationContext context, ComponentModel model, DependencyModel dependency) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Resolvers\DefaultDependencyResolver.cs:390&#xD;&#xA;   Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Resolvers\DefaultDependencyResolver.cs:243&#xD;&#xA;   Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArgumentsCore(ConstructorCandidate constructor, Object[] arguments, CreationContext context, Type[] signature) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:353&#xD;&#xA;   Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context, Type[]&amp;amp; signature) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:338&#xD;&#xA;   Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:90&#xD;&#xA;   Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\DefaultComponentActivator.cs:70&#xD;&#xA;   Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\ComponentActivator\AbstractComponentActivator.cs:75&#xD;&#xA;   Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Lifestyle\AbstractLifestyleManager.cs:42&#xD;&#xA;   Castle.MicroKernel.Lifestyle.PerWebRequestLifestyleManager.Resolve(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Lifestyle\PerWebRequestLifestyleManager.cs:54&#xD;&#xA;   Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\DefaultHandler.cs:61&#xD;&#xA;   Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context, Boolean instanceRequired) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:771&#xD;&#xA;   Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\Handlers\AbstractHandler.cs:369&#xD;&#xA;   Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\DefaultKernel.cs:899&#xD;&#xA;   Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments) in c:\TeamCity\buildAgent\work\83ad55e3df18b1a8\src\Castle.Windsor\MicroKernel\DefaultKernel_Resolve.cs:188&#xD;&#xA;   WebFormsMvp.Castle.CastlePresenterFactory.Create(Type presenterType, Type viewType, IView viewInstance) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp.Castle\CastlePresenterFactory.cs:30&#xD;&#xA;   WebFormsMvp.Binder.PresenterBinder.BuildPresenter(HttpContextBase httpContext, ITraceContext traceContext, IMessageBus messageBus, Action`1 presenterCreatedCallback, IPresenterFactory presenterFactory, PresenterBinding binding, IView viewInstance) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\Binder\PresenterBinder.cs:468&#xD;&#xA;   WebFormsMvp.Binder.&amp;lt;&amp;gt;c__DisplayClass2e.&amp;lt;BuildPresenters&amp;gt;b__2d(IView viewInstance) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\Binder\PresenterBinder.cs:442&#xD;&#xA;   System.Linq.WhereSelectArrayIterator`2.MoveNext() +66&#xD;&#xA;   System.Linq.&amp;lt;SelectManyIterator&amp;gt;d__14`2.MoveNext() +293&#xD;&#xA;   WebFormsMvp.CollectionExtensions.AddRange(ICollection`1 target, IEnumerable`1 items) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\CollectionExtensions.cs:17&#xD;&#xA;   WebFormsMvp.Binder.PresenterBinder.PerformBinding() in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\Binder\PresenterBinder.cs:220&#xD;&#xA;   WebFormsMvp.Web.PageViewHost.Page_InitComplete(Object sender, EventArgs e) in c:\Code\webformsmvp\WebFormsMvp\WebFormsMvp\Web\PageViewHost.cs:70&#xD;&#xA;   System.EventHandler.Invoke(Object sender, EventArgs e) +0&#xD;&#xA;   System.Web.UI.Page.OnInitComplete(EventArgs e) +121&#xD;&#xA;   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +617&#xD;&#xA;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_CHARSET:ISO-8859-1,utf-8;q=0.7,*;q=0.3&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip,deflate,sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8&#xD;&#xA;HTTP_HOST:localhost:24271&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.152 Safari/537.22&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3&#xD;&#xA;Accept-Encoding: gzip,deflate,sdch&#xD;&#xA;Accept-Language: en-US,en;q=0.8&#xD;&#xA;Host: localhost:24271&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.152 Safari/537.22&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\dev\WIM\WorkItemMigrator\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="NTLM" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="LENOVO-PC\stephen.godbold" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="LENOVO-PC\stephen.godbold" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="LENOVO-PC\stephen.godbold" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/default.aspx" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\dev\WIM\WorkItemMigrator\default.aspx" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/default.aspx" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="24271" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/default.aspx" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_CHARSET">
+      <value string="ISO-8859-1,utf-8;q=0.7,*;q=0.3" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip,deflate,sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:24271" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.152 Safari/537.22" />
+    </item>
+  </serverVariables>
+</error>

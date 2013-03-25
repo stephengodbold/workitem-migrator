@@ -8,8 +8,8 @@ using Castle.Windsor;
 using WebFormsMvp;
 using WebFormsMvp.Binder;
 using WebFormsMvp.Castle;
+using WorkItemMigrator.Migration;
 using WorkItemMigrator.Migration.Locators;
-using WorkItemMigrator.Migration.Providers;
 using WorkItemMigrator.Services;
 using WorkItemMigrator.Views;
 
@@ -21,6 +21,7 @@ namespace WorkItemMigrator
         {
             var container = new WindsorContainer();
             container.AddFacility<TypedFactoryFacility>();
+            container.AddFacility<CollectionFacility>();
 
             RegisterViews(container);
             RegisterPresentersByConvention(container);
@@ -40,8 +41,11 @@ namespace WorkItemMigrator
                 Component.For<ISearchView>()
                     .ImplementedBy<SearchView>()
                     .LifeStyle.Is(LifestyleType.PerWebRequest),
-                Component.For<IResultView>()
-                    .ImplementedBy<ResultView>()
+                Component.For<IItemView>()
+                    .ImplementedBy<ItemView>()
+                    .LifeStyle.Is(LifestyleType.PerWebRequest),
+                Component.For<IResultsView>()
+                    .ImplementedBy<ResultsView>()
                     .LifeStyle.Is(LifestyleType.PerWebRequest)
             );
         }
@@ -57,11 +61,9 @@ namespace WorkItemMigrator
         private void RegisterMigrationTypes(IWindsorContainer container)
         {
             container.Register(
-                Component.For<ISearchProviderFactory>()
+                Component.For<IServiceLocatorSelector>()
                     .AsFactory(f => f.SelectedWith<NameSelector>()),
-                Component.For<IServiceLocatorFactory>()
-                    .AsFactory(f => f.SelectedWith<NameSelector>()),
-                Component.For<IRepositoryProviderFactory>()
+                Component.For<IRepositorySelector>()
                     .AsFactory(f => f.SelectedWith<NameSelector>()),
                 Component.For<NameSelector>()
             );
@@ -74,24 +76,14 @@ namespace WorkItemMigrator
 
             container.Register(
                 AllTypes.FromAssemblyInDirectory(extensionAssemblyFilter)
-                    .BasedOn<ISearchProvider>()
-                    .ConfigureFor<ISearchProvider>(
-                        registration =>
-                        {
-                            registration.LifeStyle.Is(LifestyleType.Transient);
-                            registration.Named(registration.Implementation.Name);
-                        })
-                    .WithService.Select(new[] { typeof(ISearchProvider) }),
-
-                AllTypes.FromAssemblyInDirectory(extensionAssemblyFilter)
-                    .BasedOn<IRepositoryProvider>()
-                    .ConfigureFor<IRepositoryProvider>(
+                    .BasedOn<IRepository>()
+                    .ConfigureFor<IRepository>(
                         registration => {
                             registration.LifeStyle.Is(LifestyleType.Transient);
                             registration.Named(registration.Implementation.Name);
                         })
                     .WithService
-                    .Select(new[] {typeof(IRepositoryProvider)}),
+                    .Select(new[] {typeof(IRepository)}),
 
                 AllTypes.FromAssemblyInDirectory(extensionAssemblyFilter)
                     .BasedOn<IServiceLocator>()
@@ -101,23 +93,24 @@ namespace WorkItemMigrator
                             registration.LifeStyle.Is(LifestyleType.Transient);
                             registration.Named(registration.Implementation.Name);
                         })
-                    .WithService.Select(new[] {typeof(IServiceLocator)})
+                    .WithService.Select(new[] {typeof(IServiceLocator)}),
+
+
+                Component.For<SearchHub>()
+                    .ImplementedBy<SearchHub>()
+                    .LifeStyle.Is(LifestyleType.PerWebRequest)
             );
 
-            
         }
 
         private void CatalogueExtensions(IWindsorContainer container)
         {
             var extensionManager = new ExtensionManager
                                        {
-                                           SearchProviders = new Dictionary<string, string>(),
                                            Repositories = new Dictionary<string, string>()
                                        };
 
-            container.ResolveAll<ISearchProvider>().ForEach(
-                provider => extensionManager.SearchProviders.Add(provider.GetType().Name, provider.FriendlyName));
-            container.ResolveAll<IRepositoryProvider>().ForEach(
+            container.ResolveAll<IRepository>().ForEach(
                 repository => extensionManager.Repositories.Add(repository.GetType().Name, repository.FriendlyName));
 
             container.Register(
@@ -126,18 +119,5 @@ namespace WorkItemMigrator
                     .LifeStyle.Is(LifestyleType.Singleton)
             );
         }
-
-    }
-
-    internal class ExtensionManager : IExtensionManager
-    {
-        public IDictionary<string, string> SearchProviders { get; set; }
-        public IDictionary<string, string> Repositories { get; set; }
-    }
-
-    public interface IExtensionManager
-    {
-        IDictionary<string, string> SearchProviders { get; set; }
-        IDictionary<string, string> Repositories { get; set; }
     }
 }

@@ -2,7 +2,9 @@ namespace WorkItemMigrator.Models
 {
     public enum Action
     {
+        Fetch,
         Search,
-        ViewResult
+        View,
+        List,
     }
 }

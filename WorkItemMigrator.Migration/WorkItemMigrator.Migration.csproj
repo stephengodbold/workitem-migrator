@@ -57,6 +57,7 @@
       <HintPath>..\packages\Microsoft.Composition.1.0.15\lib\net45\System.Composition.TypedParts.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,20 +65,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Footprints\HelpdeskRepository.cs" />
+    <Compile Include="Footprints\ServiceProxy.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GraphTypes\GraphExtensions.cs" />
     <Compile Include="GraphTypes\StateGraphBuilder.cs" />
     <Compile Include="GraphTypes\WalkingPath.cs" />
-    <Compile Include="Locators\IServiceLocatorFactory.cs" />
-    <Compile Include="Providers\ExampleRepositoryProvider.cs" />
-    <Compile Include="Providers\IRepositoryProviderFactory.cs" />
-    <Compile Include="Providers\ISearchProviderFactory.cs" />
+    <Compile Include="Locators\IServiceLocatorSelector.cs" />
+    <Compile Include="IRepositorySelector.cs" />
     <Compile Include="Locators\IServiceLocator.cs" />
     <Compile Include="Models\WorkItem.cs" />
     <Compile Include="Models\WorkItemType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\IRepositoryProvider.cs" />
-    <Compile Include="Providers\ISearchProvider.cs" />
-    <Compile Include="Providers\TfsSearchProvider.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="SearchHub.cs" />
+    <Compile Include="TeamFoundation\StudyGlobalRepository.cs" />
+    <Compile Include="TeamFoundation\StudyGlobalDevRepository.cs" />
+    <Compile Include="TeamFoundation\WorkItemProvider.cs" />
     <Compile Include="Locators\TfsServiceLocator.cs" />
     <Compile Include="GraphTypes\GraphNode.cs" />
     <Compile Include="GraphTypes\GraphWalker.cs" />
@@ -85,6 +90,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
